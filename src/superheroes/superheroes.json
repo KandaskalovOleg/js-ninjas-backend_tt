@@ -1,0 +1,110 @@
+[
+  {
+    "nickname": "Superman",
+    "real_name": "Clark Kent",
+    "origin_description": "He was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction...",
+    "superpowers": "Solar energy absorption and healing factor, solar flare and heat vision, solar invulnerability, flight...",
+    "catch_phrase": "Look, up in the sky, it's a bird, it's a plane, it's Superman!",
+    "images": [
+      "uploads\\Superman\\image1.jpg",
+      "uploads\\Superman\\image2.jpg",
+      "uploads\\Superman\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Spider-Man",
+    "real_name": "Peter Parker",
+    "origin_description": "After being bitten by a radioactive spider, Peter Parker gains superpowers...",
+    "superpowers": "Wall-crawling, web-slinging, super strength, agility, and reflexes...",
+    "catch_phrase": "With great power comes great responsibility.",
+    "images": [
+      "uploads\\Spider-Man\\image1.jpg",
+      "uploads\\Spider-Man\\image2.jpg",
+      "uploads\\Spider-Man\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Iron Man",
+    "real_name": "Tony Stark",
+    "origin_description": "Tony Stark is a genius inventor, billionaire, and philanthropist who creates a powered suit of armor...",
+    "superpowers": "Powered suit with flight, super strength, energy blasts, and advanced technology...",
+    "catch_phrase": "I am Iron Man.",
+    "images": [
+      "uploads\\Iron Man\\image1.jpg",
+      "uploads\\Iron Man\\image2.jpg",
+      "uploads\\Iron Man\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Captain America",
+    "real_name": "Steve Rogers",
+    "origin_description": "Steve Rogers undergoes a super-soldier transformation during World War II...",
+    "superpowers": "Enhanced strength, agility, endurance, and a vibranium shield...",
+    "catch_phrase": "I can do this all day.",
+    "images": [
+      "uploads\\Captain America\\image1.jpg",
+      "uploads\\Captain America\\image2.jpg",
+      "uploads\\Captain America\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Black Widow",
+    "real_name": "Natasha Romanoff",
+    "origin_description": "Natasha Romanoff is a former Russian spy and assassin who becomes a superhero...",
+    "superpowers": "Expert martial artist, espionage skills, and advanced weaponry...",
+    "catch_phrase": "I'm always picking up after you boys.",
+    "images": [
+      "uploads\\Black Widow\\image1.jpg",
+      "uploads\\Black Widow\\image2.jpg",
+      "uploads\\Black Widow\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Hulk",
+    "real_name": "Bruce Banner",
+    "origin_description": "Bruce Banner is a scientist who, after a gamma radiation accident, transforms into the Hulk...",
+    "superpowers": "Incredible strength and durability, regenerative healing factor...",
+    "catch_phrase": "Hulk smash!",
+    "images": [
+      "uploads\\Hulk\\image1.jpg",
+      "uploads\\Hulk\\image2.jpg",
+      "uploads\\Hulk\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Thor",
+    "real_name": "Thor Odinson",
+    "origin_description": "Thor is the Norse God of Thunder who wields the enchanted hammer Mjolnir...",
+    "superpowers": "Control of lightning, superhuman strength, flight, and Mjolnir's power...",
+    "catch_phrase": "I am Thor, the God of Thunder!",
+    "images": [
+      "uploads\\Thor\\image1.jpg",
+      "uploads\\Thor\\image2.jpg",
+      "uploads\\Thor\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Doctor Strange",
+    "real_name": "Stephen Strange",
+    "origin_description": "Stephen Strange is a brilliant neurosurgeon who gains mystical powers after a car accident...",
+    "superpowers": "Mystical abilities, time manipulation, and mastery of the mystic arts...",
+    "catch_phrase": "I've come to bargain.",
+    "images": [
+      "uploads\\Doctor Strange\\image1.jpg",
+      "uploads\\Doctor Strange\\image2.jpg",
+      "uploads\\Doctor Strange\\image3.jpg"
+    ]
+  },
+  {
+    "nickname": "Black Panther",
+    "real_name": "T'Challa",
+    "origin_description": "T'Challa is the king of the fictional African nation of Wakanda and possesses enhanced abilities...",
+    "superpowers": "Enhanced strength, agility, senses, and Vibranium suit...",
+    "catch_phrase": "Wakanda forever!",
+    "images": [
+      "uploads\\Black Panther\\image1.jpg",
+      "uploads\\Black Panther\\image2.jpg",
+      "uploads\\Black Panther\\image3.jpg"
+    ]
+  }
+]
