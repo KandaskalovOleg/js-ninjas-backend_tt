@@ -7,7 +7,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 @Module({
   imports: [
     SuperheroesModule,
-    MongooseModule.forRoot('mongodb://127.0.0.1:27017/superheroes'),
+    MongooseModule.forRoot(
+      process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/superheroes',
+    ),
   ],
   controllers: [AppController],
   providers: [AppService],
