@@ -1,4 +1,8 @@
-import { Injectable } from '@nestjs/common';
+import {
+  Injectable,
+  InternalServerErrorException,
+  NotFoundException,
+} from '@nestjs/common';
 import {
   CreateSuperheroeVm,
   Superheroe,
@@ -65,6 +69,59 @@ export class SuperheroesService {
     const savedSuperheroe = await createdSuperheroe.save();
 
     return savedSuperheroe;
+  }
+
+  async deleteImage(id: string, fileName: string): Promise<void> {
+    const superheroe = await this.superheroeModel.findById(id).exec();
+    if (!superheroe) {
+      throw new NotFoundException('Superhero not found');
+    }
+
+    const images = superheroe.images;
+    const indexOfImageToDelete = images.findIndex((path) =>
+      path.endsWith(fileName),
+    );
+
+    const imagePathToDelete = images[indexOfImageToDelete];
+    if (fs.existsSync(imagePathToDelete)) {
+      fs.unlinkSync(imagePathToDelete);
+    }
+
+    images.splice(indexOfImageToDelete, 1);
+
+    await superheroe.save();
+  }
+
+  async createImage(
+    image: Express.Multer.File,
+    heroId: string,
+  ): Promise<string> {
+    const superheroe = await this.superheroeModel.findById(heroId).exec();
+
+    if (!superheroe) {
+      throw new NotFoundException('Superhero not found');
+    }
+
+    const heroFolder = path.join('uploads', superheroe.nickname);
+
+    if (!fs.existsSync(heroFolder)) {
+      fs.mkdirSync(heroFolder, { recursive: true });
+    }
+
+    const filePath = path.join(heroFolder, image.originalname);
+
+    try {
+      await fs.promises.writeFile(filePath, image.buffer);
+
+      superheroe.images.push(filePath);
+
+      await superheroe.save();
+
+      return 'Image uploaded successfully';
+    } catch (error) {
+      console.error('Error saving image:', error);
+      throw new InternalServerErrorException('Error saving image');
+    }
   }
 
   async seed(): Promise<any> {

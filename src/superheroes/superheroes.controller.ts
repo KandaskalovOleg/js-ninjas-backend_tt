@@ -8,6 +8,7 @@ import {
   Patch,
   UseInterceptors,
   UploadedFiles,
+  UploadedFile,
 } from '@nestjs/common';
 import { SuperheroesService } from './superheroes.service';
 import {
@@ -15,7 +16,7 @@ import {
   Superheroe,
   UpdateSuperheroeVm,
 } from './superheroes.schema';
-import { FilesInterceptor } from '@nestjs/platform-express';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 
 @Controller('superheroes')
 export class SuperheroesController {
@@ -34,6 +35,14 @@ export class SuperheroesController {
   @Delete('delete/:id')
   delete(@Param('id') id: string): Promise<any> {
     return this.superheroesService.delete(id);
+  }
+
+  @Delete('delete-image/:id/:fileName')
+  deleteImage(
+    @Param('id') id: string,
+    @Param('fileName') fileName: string,
+  ): Promise<void> {
+    return this.superheroesService.deleteImage(id, fileName);
   }
 
   @Patch('update/:id')
@@ -56,5 +65,14 @@ export class SuperheroesController {
     );
 
     return createdSuperheroe;
+  }
+
+  @Post('create-image/:heroId')
+  @UseInterceptors(FileInterceptor('image'))
+  async createImage(
+    @UploadedFile() image: Express.Multer.File,
+    @Param('heroId') heroId: string,
+  ): Promise<string> {
+    return this.superheroesService.createImage(image, heroId);
   }
 }
